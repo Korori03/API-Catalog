@@ -12,12 +12,12 @@ videosRouter.get('/percent', videosController.findAllPercent);
 videosRouter.get('/total', videosController.findAllTotal);
 
 // Calls VideosType(_type,_userid);
-videosRouter.get('/:type', videosController.findType);
+videosRouter.get('/type', videosController.findType);
 
 // Calls VideosTypePercent(_type,_userid);
-videosRouter.get('/:type/percent', videosController.findTypePercent);
+videosRouter.get('/type/percent', videosController.findTypePercent);
 
 // Calls VideosItemSelection(_type,_item,_userid);
-videosRouter.get('/:type/:item/info', videosController.findItem); 
+videosRouter.get('/type/item', videosController.findItem); 
 
 module.exports = videosRouter

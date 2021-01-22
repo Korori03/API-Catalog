@@ -12,12 +12,12 @@ musicRouter.get('/percent', musicController.findAllPercent);
 musicRouter.get('/total', musicController.findAllTotal);
 
 // Calls MusicType(_type,_userid);
-musicRouter.get('/:type', musicController.findType);
+musicRouter.get('/type', musicController.findType);
 
 // Calls MusicTypePercent(_type,_userid);
-musicRouter.get('/:type/percent', musicController.findTypePercent);
+musicRouter.get('/type/percent', musicController.findTypePercent);
 
 // Calls MusicItemSelection(_type,_item,_userid);
-musicRouter.get('/:type/:item/info', musicController.findItem); 
+musicRouter.get('/type/item', musicController.findItem); 
 
 module.exports = musicRouter

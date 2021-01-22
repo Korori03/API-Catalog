@@ -12,18 +12,18 @@ gamesRouter.get('/percent', gamesController.findAllPercent);
 gamesRouter.get('/total', gamesController.findAllTotal);
 
 // Calls GamesBrand(_brand,_userid);
-gamesRouter.get('/:brand', gamesController.findBrands);
+gamesRouter.get('/brand', gamesController.findBrands);
 
 // Calls GamesBrandPercent(_brand,_userid);
-gamesRouter.get('/:brand/percent', gamesController.findBrandsPercent);
+gamesRouter.get('/brand/percent', gamesController.findBrandsPercent);
 
 // Calls GamesSystem(_brand,_system,_userid);
-gamesRouter.get('/:brand/:systems', gamesController.findSystems);
+gamesRouter.get('/brand/system', gamesController.findSystems);
 
 // Calls GamesSystemPercent(_brand,_system,_userid);
-gamesRouter.get('/:brand/:systems/percent', gamesController.findSystemsPercent);
+gamesRouter.get('/brand/systems/percent', gamesController.findSystemsPercent);
 
 // Calls GamesInfo(_brand,_system,_item,_userid);
-gamesRouter.get('/:brand/:systems/:item/info', gamesController.findGame);
+gamesRouter.get('/brand/systems/item', gamesController.findGame);
 
 module.exports = gamesRouter

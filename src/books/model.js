@@ -27,7 +27,7 @@ Books.findList = function (item, result) {
 	con.query(sql, data,(err, row, fields) => {
 		console.log("error: ", err);
 		if (err) result(err, null);
-		result(null, row);
+		result(null, row[0]);
 	});
 };
 
@@ -39,7 +39,7 @@ Books.findTotal = function (item, result) {
 	con.query(sql, data,(err, row, fields) => {
 		console.log("error: ", err);
 		if (err) result(err, null);
-		result(null, row);
+		result(null, row[0]);
 	});
 };
 

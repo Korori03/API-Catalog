@@ -4,8 +4,8 @@ const mysql = require('mysql');
 
 var con = mysql.createConnection({
 	host: 'db',
-	user: 'root',
-	password: 'root',
+	user: 'korori',
+	password: '1ExA5yDeNYjpl9dr',
 	database: 'catalog'
 },
 { flags: '-FOUND_ROWS' }

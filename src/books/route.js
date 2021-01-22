@@ -12,12 +12,12 @@ booksRouter.get('/total', booksController.findTotal);
 booksRouter.get('/percent', booksController.findAllPercent); 
 
 // Calls BooksType(_type,_userid);
-booksRouter.get('/:type', booksController.findType);
+booksRouter.get('/type', booksController.findType);
 
 // Calls BooksTypePercent(_type,_userid);
-booksRouter.get('/:type/percent', booksController.findTypePercent); 
+booksRouter.get('/type/percent', booksController.findTypePercent); 
 
 // Calls BooksInfo(_type,_item,_userid);
-booksRouter.get('/:type/:item/info', booksController.findBook); 
+booksRouter.get('/type/item', booksController.findBook); 
 
 module.exports = booksRouter

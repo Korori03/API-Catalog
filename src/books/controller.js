@@ -53,7 +53,7 @@ exports.findBook = function(req, res) {
 	const newItem = new Books(req.body);
 	if(req.body.constructor === Object && Object.keys(req.body).length === 0){
 		return res.status(400).send('1');
-	} if (!newItem.type|| !newItem.userid) {		
+	} if (!newItem.type ||!newItem.id || !newItem.userid) {		
 		return res.status(400).send('Type or User ID not provided')
 	} else {		
 		Books.findBook(newItem, function(err, items) {
