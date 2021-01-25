@@ -102,9 +102,5 @@ Games.findGame = function (item, result) {
 	});
 };
 
-
-
-
-
 module.exports = Games;
 

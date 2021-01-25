@@ -50,6 +50,25 @@ exports.findSystems = function(req, res) {
 	}	
 };
 
+// Calls GamesSystemsLetter(_brand,_system,_letter,_userid);
+exports.findSystemsLetter = function(req, res) {
+	const newItem = new Games(req.body);
+	if(req.body.constructor === Object && Object.keys(req.body).length === 0){
+		return res.status(400).send('1');
+	} if (!newItem.brand || !newItem.system || !newItem.system  || !newItem.userid) {		
+		return res.status(400).send('Brand or System or User ID not provided')
+	} else {		
+		Games.findSystemsLetter(newItem, function(err, items) {
+			console.log('err: ', err);
+			if (err || items <= 0) return res.status(500).send('Error occured during grabing brand');
+			return res.send(items);
+		});
+	}	
+};
+
+
+
+
 // Calls GamesInfo(_brand,_system,_item,_userid);
 exports.findGame = function(req, res) {
 	const newItem = new Games(req.body);
@@ -134,3 +153,4 @@ exports.findSystemsPercent = function(req, res) {
 		});
 	}	
 };
+

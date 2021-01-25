@@ -21,9 +21,14 @@ gamesRouter.get('/brand/percent', gamesController.findBrandsPercent);
 gamesRouter.get('/brand/system', gamesController.findSystems);
 
 // Calls GamesSystemPercent(_brand,_system,_userid);
-gamesRouter.get('/brand/systems/percent', gamesController.findSystemsPercent);
+gamesRouter.get('/brand/system/percent', gamesController.findSystemsPercent);
+
+// Calls GamesSystemsLetter(_brand,_system,_letter,_userid);
+gamesRouter.get('/brand/system/:letter', gamesController.findSystemsLetter);
 
 // Calls GamesInfo(_brand,_system,_item,_userid);
 gamesRouter.get('/brand/systems/item', gamesController.findGame);
+
+
 
 module.exports = gamesRouter
